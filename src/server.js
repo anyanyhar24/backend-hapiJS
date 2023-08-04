@@ -38,8 +38,6 @@ const init = async () => {
   const authorizationService = new AuthorizationServices(userService)
 
   const server = Hapi.Server({
-    host: 'localhost',
-    port: process.env.PORT,
     routes: {
       cors: {
         origin: ['*']
@@ -132,7 +130,6 @@ const init = async () => {
 
   await databases()
   await server.start()
-  console.log(`Server Running on ${server.info.uri}`)
 }
 
 init()
