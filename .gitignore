@@ -1,0 +1,3 @@
+node_modules/
+.env
+hapi-cnn-api-webserver.pem
