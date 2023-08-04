@@ -38,6 +38,8 @@ const init = async () => {
   const authorizationService = new AuthorizationServices(userService)
 
   const server = Hapi.Server({
+    host: '0.0.0.0',
+    port: process.env.PORT,
     routes: {
       cors: {
         origin: ['*']
